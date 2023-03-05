@@ -9,9 +9,11 @@ import java.util.List;
 @RestController
 public class BooksApi {
     private final BookService bookService;
+
     public BooksApi(BookService bookService){
         this.bookService = bookService;
     }
+
     @GetMapping("/api/books")
     public List<Book> index() {
         return bookService.allBooks();
